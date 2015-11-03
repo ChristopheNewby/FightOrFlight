@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "FightOrFlight",
+	uint64 LibraryId = 562efd72e0ef90fb,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},
