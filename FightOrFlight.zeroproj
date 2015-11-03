@@ -6,7 +6,7 @@ Cog =
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
-		string ProjectFolder = "C:\Users\16.Christopher.Newby\Documents\ZeroProjects\FightOrFlight",
+		string ProjectFolder = "C:\Users\16.Christopher.Newby\Desktop\GitHub\FightOrFlight",
 		uint ProjectEngineRevision = 12439,
 		bool AutoTakeProjectScreenshot = true,
 	},
