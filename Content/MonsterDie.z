@@ -7,7 +7,7 @@ class MonsterDie : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if (event.OtherObject.Name == "HitZone" && this.Space.FindObjectByName("HitZone").MultiConvexMeshCollider.Ghost == false)
+        if (event.OtherObject.Name == "HitZone" && Zero.Keyboard.KeyIsPressed(Keys.O))
         {
             this.Owner.Destroy();
         }

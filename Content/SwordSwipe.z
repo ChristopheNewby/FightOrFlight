@@ -7,13 +7,9 @@ class SwordSwipe : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if (Zero.Keyboard.KeyIsPressed(Keys.O))
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            this.Space.FindObjectByName("HitZone").MultiConvexMeshCollider.Ghost = false;
-        }
-        else if (Zero.Keyboard.KeyIsReleased(Keys.O))
-        {
-            this.Space.FindObjectByName("HitZone").MultiConvexMeshCollider.Ghost = true;
+            
         }
     }
 }
