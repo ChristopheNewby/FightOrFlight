@@ -2,12 +2,12 @@ class MonsterDie : ZilchComponent
 {
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
     }
 
-    function OnCollisionStarted(event : CollisionEvent)
+    function OnCollisionPersisted(event : CollisionEvent)
     {
-        if (event.OtherObject.Name == "HitZone" && Zero.Keyboard.KeyIsPressed(Keys.O))
+        if (event.OtherObject.ArchetypeName == "HitZone" && Zero.Keyboard.KeyIsDown(Keys.O))
         {
             this.Owner.Destroy();
         }
