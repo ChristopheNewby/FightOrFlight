@@ -13,5 +13,9 @@ class HealthHurt : ZilchComponent
             temp -=1;
             this.Space.FindObjectByName("Health").HealthCounter.Health = temp;
         }
+        if (this.Space.FindObjectByName("Health").HealthCounter.Health == 0)
+        {
+            this.Owner.Destroy();
+        }
     }
 }

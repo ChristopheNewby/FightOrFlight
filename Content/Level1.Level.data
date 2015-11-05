@@ -198,6 +198,9 @@ Level =
 		SwordSwipe = 
 		{
 		},
+		HealthHurt = 
+		{
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -263,6 +266,10 @@ Level =
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,
+				},
+				HealthCounter = 
+				{
+					int Health = 10,
 				},
 			},
 			Cog = 
