@@ -1,8 +1,11 @@
 class HealthHurt : ZilchComponent
 {
+    var Timer : Real = 0.0;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnCollisionStarted(event : CollisionEvent)
@@ -13,6 +16,22 @@ class HealthHurt : ZilchComponent
             temp -=1;
             this.Space.FindObjectByName("Health").HealthCounter.Health = temp;
         }
+    }
+    
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        this.Timer += 1;
+        if (event.OtherObject.ArchetypeName == "Zombie" && this.Timer >= 60)
+        {
+            var temp = this.Space.FindObjectByName("Health").HealthCounter.Health;
+            temp -=1;
+            this.Space.FindObjectByName("Health").HealthCounter.Health = temp;
+            this.Timer = 0;
+        }
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
         if (this.Space.FindObjectByName("Health").HealthCounter.Health == 0)
         {
             this.Owner.Destroy();

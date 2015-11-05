@@ -1,8 +1,8 @@
 class HealthCounter : ZilchComponent
 {
     [Property]
-    var Health : Integer = 10;
-    var Text : String = "Health: 10";
+    var Health : Integer = 5;
+    var Text : String = "Health: 5";
     //var Timer : Real = 0;
     
     function Initialize(init : CogInitializer)

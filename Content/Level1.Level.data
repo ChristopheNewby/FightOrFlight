@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.99442267, -2.01563811, 50],
+			Vec3 Translation = [2.75795984, -0.0225912333, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.99442267, -2.01563811, 1.30891038e-007],
+			Vec3 LookTarget = [2.75795984, -0.0225912333, 1.20554887e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -262,14 +262,14 @@ Level =
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 					string FontName = "4e7bac697bec55c5:Verdana",
 					uint FontSize = 25,
-					string Text = "Health ~ 10",
+					string Text = "Health ~ 5",
 					TextAlign Align = Left,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,
 				},
 				HealthCounter = 
 				{
-					int Health = 10,
+					int Health = 5,
 				},
 			},
 			Cog = 
@@ -713,42 +713,6 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0.0352555588, 5.56398487, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Zombie",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "562c557ab3ae097c:Zombie",
-		LinkId = 
-		{
-			uint Id = 16,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [4.65571117, 0.190759182, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Zombie",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "562c557ab3ae097c:Zombie",
-		LinkId = 
-		{
-			uint Id = 17,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.39866221, -3.28756094, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
