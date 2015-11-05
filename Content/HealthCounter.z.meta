@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "HealthCounter",
+		uint64 ResourceId = 562c28e9b5bd4b36,
+	},
+},

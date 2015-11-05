@@ -7,7 +7,7 @@ class MonsterDie : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        if (event.OtherObject.ArchetypeName == "HitZone" && Zero.Keyboard.KeyIsDown(Keys.O))
+        if (event.OtherObject.Name == "HitZone" && Zero.Keyboard.KeyIsDown(Keys.O))
         {
             this.Owner.Destroy();
         }

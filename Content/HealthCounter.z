@@ -1,0 +1,22 @@
+class HealthCounter : ZilchComponent
+{
+    [Property]
+    var Health : Integer = 10;
+    var Text : String = "Health: 10";
+    //var Timer : Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var temp = "Health: `this.Health`";
+        this.Owner.SpriteText.Text = temp;
+        if(this.Health < 0)
+        {
+            this.Health = 0;
+        }
+    }
+}

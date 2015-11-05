@@ -1,5 +1,6 @@
 class SwordSwipe : ZilchComponent
 {
+    //var HitZone : 
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
