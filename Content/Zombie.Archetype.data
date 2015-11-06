@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Zombie",
 	},
+	Archetyped = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0.773982167, 4.81851768, -1.05507048e-007],
+		Vec3 Translation = [0.0352555588, 5.56398487, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -59,7 +63,7 @@ Cog =
 	},
 	EnemyController = 
 	{
-		float PaceSpeed = 0.100000001,
+		float PaceSpeed = 0.25,
 		float MaxMoveDistance = 5,
 		CogPath TargetObject = 
 		{
