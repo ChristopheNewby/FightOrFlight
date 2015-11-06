@@ -5,43 +5,14 @@ class SwordSwipe : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && Zero.Keyboard.KeyIsDown(Keys.W))
+        if (Zero.Keyboard.KeyIsPressed(Keys.W))
         {
-            this.Space.FindObjectByName("HitZoneA").MultiConvexMeshCollider.Ghost = false;
-        }
-        else if (Zero.Keyboard.KeyIsReleased(Keys.O))
-        {
-            this.Space.FindObjectByName("HitZoneA").MultiConvexMeshCollider.Ghost = true;
-        }
-        
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && Zero.Keyboard.KeyIsDown(Keys.A))
-        {
-            this.Space.FindObjectByName("HitZoneB").MultiConvexMeshCollider.Ghost = false;
-        }
-        else if (Zero.Keyboard.KeyIsReleased(Keys.O))
-        {
-            this.Space.FindObjectByName("HitZoneB").MultiConvexMeshCollider.Ghost = true;
-        }
-        
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && Zero.Keyboard.KeyIsDown(Keys.S))
-        {
-            this.Space.FindObjectByName("HitZoneC").MultiConvexMeshCollider.Ghost = false;
-        }
-        else if (Zero.Keyboard.KeyIsReleased(Keys.O))
-        {
-            this.Space.FindObjectByName("HitZoneC").MultiConvexMeshCollider.Ghost = true;
-        }
-        
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && Zero.Keyboard.KeyIsDown(Keys.D))
-        {
-            this.Space.FindObjectByName("HitZoneD").MultiConvexMeshCollider.Ghost = false;
-        }
-        else if (Zero.Keyboard.KeyIsReleased(Keys.O))
-        {
-            this.Space.FindObjectByName("HitZoneD").MultiConvexMeshCollider.Ghost = true;
+            var spawnPosition = this.Owner.Transform.Translation;
+            var archetypeToSpawn = Archetype.Find("HitZone");
+            
+            
         }
     }
 }

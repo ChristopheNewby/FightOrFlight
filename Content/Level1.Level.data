@@ -106,7 +106,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.61291277, 2.3787694, 50],
+			Vec3 Translation = [1.67623258, 2.80350423, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -118,7 +118,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 18.2683964,
 		},
 		EditorCameraController = 
 		{
@@ -126,7 +126,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.61291277, 2.3787694, 7.05033756e-008],
+			Vec3 LookTarget = [1.67623258, 2.80350423, 7.32711882e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -160,7 +160,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 1, 0.940000057, 1],
+			Vec4 Color = [1, 0.720000029, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -197,9 +197,6 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		SwordSwipe = 
-		{
 		},
 		HealthHurt = 
 		{
@@ -275,297 +272,13 @@ Level =
 					int Health = 5,
 				},
 			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 6,
-				},
-				Named = 
-				{
-					string Name = "HitZoneA",
-				},
-				Archetyped = 
-				{
-					string Name = "56b65f66519ec1fc:HitZone",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0.867467105, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "562d9eb327ec16c3:HitZone",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				RigidBody = 
-				{
-					bool Static = true,
-					bool Asleep = false,
-					bool Kinematic = false,
-					bool RotationLocked = true,
-					bool Mode2D = true,
-					bool AllowSleep = true,
-					bool Inherit2DMode = true,
-					Vec3 Velocity = [0, 0, 0],
-					Vec3 AngularVelocity = [0, 0, 0],
-				},
-				MultiConvexMeshCollider = 
-				{
-					bool Ghost = true,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					string MeshName = "562d9ed22d7a8bd1:HitZone",
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 7,
-				},
-				Named = 
-				{
-					string Name = "HitZoneB",
-				},
-				Archetyped = 
-				{
-					string Name = "56b65f66519ec1fc:HitZone",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.867466986, 0, 0],
-					Vec3 Scale = [0.99999994, 0.99999994, 1],
-					Quat Rotation = [0, 0, 0.707106769, 0.707106769],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "562d9eb327ec16c3:HitZone",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				RigidBody = 
-				{
-					bool Static = true,
-					bool Asleep = false,
-					bool Kinematic = false,
-					bool RotationLocked = true,
-					bool Mode2D = true,
-					bool AllowSleep = true,
-					bool Inherit2DMode = true,
-					Vec3 Velocity = [0, 0, 0],
-					Vec3 AngularVelocity = [0, 0, 0],
-				},
-				MultiConvexMeshCollider = 
-				{
-					bool Ghost = true,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					string MeshName = "562d9ed22d7a8bd1:HitZone",
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 8,
-				},
-				Named = 
-				{
-					string Name = "HitZoneC",
-				},
-				Archetyped = 
-				{
-					string Name = "56b65f66519ec1fc:HitZone",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, -0.867466986, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 1, -4.37113883e-008],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "562d9eb327ec16c3:HitZone",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				RigidBody = 
-				{
-					bool Static = true,
-					bool Asleep = false,
-					bool Kinematic = false,
-					bool RotationLocked = true,
-					bool Mode2D = true,
-					bool AllowSleep = true,
-					bool Inherit2DMode = true,
-					Vec3 Velocity = [0, 0, 0],
-					Vec3 AngularVelocity = [0, 0, 0],
-				},
-				MultiConvexMeshCollider = 
-				{
-					bool Ghost = true,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					string MeshName = "562d9ed22d7a8bd1:HitZone",
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Named = 
-				{
-					string Name = "HitZoneD",
-				},
-				Archetyped = 
-				{
-					string Name = "56b65f66519ec1fc:HitZone",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.867466986, 0, 0],
-					Vec3 Scale = [0.99999994, 0.99999994, 1],
-					Quat Rotation = [0, 0, -0.707106769, 0.707106769],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "562d9eb327ec16c3:HitZone",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				RigidBody = 
-				{
-					bool Static = true,
-					bool Asleep = false,
-					bool Kinematic = false,
-					bool RotationLocked = true,
-					bool Mode2D = true,
-					bool AllowSleep = true,
-					bool Inherit2DMode = true,
-					Vec3 Velocity = [0, 0, 0],
-					Vec3 AngularVelocity = [0, 0, 0],
-				},
-				MultiConvexMeshCollider = 
-				{
-					bool Ghost = true,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					string MeshName = "562d9ed22d7a8bd1:HitZone",
-				},
-			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		EditorFlags = 
-		{
-			bool Locked = true,
-			bool Hidden = false,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-2.56689978, 0.0235970616, 1.28255904e-008],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 11,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -605,7 +318,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -663,7 +376,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 13,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -720,7 +433,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -777,7 +490,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -834,7 +547,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 11,
 				},
 				Named = 
 				{
@@ -894,11 +607,893 @@ Level =
 		string Name = "562c557ab3ae097c:Zombie",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 12,
 		},
 		Transform = 
 		{
 			Vec3 Translation = [0.0352555588, 5.56398487, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.297123, 32.1682434, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [36.2444916, 1.11561108, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [30.6655426, -30.779129, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-34.2818222, 39.5366669, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.560278177, 37.6419296, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-34.1765594, 5.74719048, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-27.5449791, -34.358078, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29.8234386, 16.3787708, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.29712451, 21.1156139, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.40238345, -26.3580723, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-21.966032, 3.01034737, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-27.7555065, 23.5366669, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14.3497562, 0.799822688, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.033968, -19.621233, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-16.1765594, -12.884388, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 28,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.50765097, -38.6738663, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 29,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [32.6655464, -12.7791262, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-32.8081398, -13.2001801, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.2291918, 24.7998219, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.87607, 30.694561, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.3344545, 12.4840326, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.9660339, 38.3787727, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.9660339, -27.7264938, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [20.4550209, -36.0422859, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 37,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-37.8607712, -26.6738644, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 38,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21.9287052, 40.27351, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 39,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5076466, 14.1682453, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 40,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.033968, -7.83175611, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 41,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.50764656, -9.83176041, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 42,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.07129669, -5.51596642, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 43,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-21.4397163, 13.6419277, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 44,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [12.7708044, 24.0629807, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 45,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-36.2818222, 17.6419296, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 46,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.8081388, -38.9896584, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 47,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.9286995, 38.1682472, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 48,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [37.1918564, 22.6945591, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 49,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.9813347, 41.6419296, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 50,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.98133469, 0.168242872, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 51,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.6502447, 2.06297922, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 52,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-24.0712948, -7.72649431, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 53,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-26.9134007, -22.779129, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 54,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-41.2291908, -5.20018101, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 55,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-39.3344536, -39.7264977, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 56,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-20.4923477, -40.3580742, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 57,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5076466, -29.6212311, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 58,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.07129669, -17.5159683, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 59,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.5602798, -8.67386246, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [35.0865936, -21.5159702, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Zombie",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "562c557ab3ae097c:Zombie",
+		LinkId = 
+		{
+			uint Id = 61,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [35.2971191, -40.7791252, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
