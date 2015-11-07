@@ -80,6 +80,6 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
-		float ChaseSpeed = 8,
+		float ChaseSpeed = 0,
 	},
 },

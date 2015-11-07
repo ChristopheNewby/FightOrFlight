@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "HitZone",
+		string Name = "HitZoneA",
 		uint64 ResourceId = 56b65f66519ec1fc,
 		string LoaderType = "Cog",
 		uint Version = 0,

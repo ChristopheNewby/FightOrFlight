@@ -1,6 +1,7 @@
 class HealthHurt : ZilchComponent
 {
     var Timer : Real = 0.0;
+    var Timer2 : Real = 0.0;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -35,6 +36,16 @@ class HealthHurt : ZilchComponent
         if (this.Space.FindObjectByName("Health").HealthCounter.Health == 0)
         {
             this.Owner.Destroy();
+        }
+        if (this.Space.FindObjectByName("Health").HealthCounter.Health < 5)
+        {
+            this.Timer2 += 1;
+            var temp = this.Space.FindObjectByName("Health").HealthCounter.Health;
+            temp +=1;
+            this.Space.FindObjectByName("Health").HealthCounter.Health = temp;
+        }
+        else if (this.Space.FindObjectByName("Health").HealthCounter.Health == 5)
+        {
         }
     }
 }

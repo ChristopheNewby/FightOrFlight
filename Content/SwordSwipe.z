@@ -1,17 +1,36 @@
 class SwordSwipe : ZilchComponent
 {
-    //var HitZone : 
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
     }
-    function OnLogicUpdate(event : UpdateEvent)
+    function OnKeyDown(event : KeyboardEvent)
     {
-        if (Zero.Keyboard.KeyIsPressed(Keys.W))
+        if (event.Key == Keys.W)
         {
             var spawnPosition = this.Owner.Transform.Translation;
-            var archetypeToSpawn = Archetype.Find("HitZone");
+            var archetypeToSpawn = Archetype.Find("HitZoneA");
+            spawnPosition.Y += 0.7;
+            this.Owner.Transform.Translation = spawnPosition;
+            this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
             
+        }
+        if (event.Key == Keys.A)
+        {
+            var spawnPosition = this.Owner.Transform.Translation;
+            var archetypeToSpawn = Archetype.Find("HitZoneB");
+            spawnPosition.X -= 0.7;
+            this.Owner.Transform.Translation = spawnPosition;
+            this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+            
+        }
+    }
+    
+    function OnKeyUp(event : KeyboardEvent)
+    {
+        if (event.Key == Keys.W)
+        {
             
         }
     }

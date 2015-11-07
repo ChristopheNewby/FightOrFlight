@@ -11,7 +11,7 @@ class EnemyController : ZilchComponent
     var TargetObject : CogPath = null;
     [Property]
     var ChaseSpeed : Real = 5.0;
-    var ChaseTriggerDistance : Real = 50.0;
+    var ChaseTriggerDistance : Real = 10.0;
     var DistanceFromTarget : Real = 0.0;
     var ChaseDirection : Real3 = Real3();
     var ChaseColor : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
