@@ -6,17 +6,13 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Zombie",
-	},
-	Archetyped = 
-	{
-		string Name = "562c557ab3ae097c:Zombie",
+		string Name = "HitZoneC",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
-		Quat Rotation = [0, 0, 0, 1],
+		Quat Rotation = [-0, 0, 1, -4.37113883e-008],
 	},
 	Sprite = 
 	{
@@ -24,11 +20,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.258230001, 0.49000001, 0.220499992, 1],
+		Vec4 Color = [1, 1, 1, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5274db4c2e7c11f9:Circle",
+		string SpriteSource = "562d9eb327ec16c3:HitZone",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,48 +34,24 @@ Cog =
 	},
 	RigidBody = 
 	{
-		bool Static = false,
+		bool Static = true,
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	BoxCollider = 
+	MultiConvexMeshCollider = 
 	{
-		bool Ghost = false,
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
-	},
-	MonsterDie = 
-	{
-	},
-	EnemyController = 
-	{
-		float PaceSpeed = 1,
-		float MaxMoveDistance = 5,
-		CogPath TargetObject = 
-		{
-			string Path = ":/Player",
-			bool ErrorOnResolveToNull = false,
-			bool ErrorOnPathCantCompute = false,
-			bool ErrorOnDirectLinkFail = false,
-			bool UpdateCogOnPathChange = true,
-			bool UpdatePathOnCogChange = true,
-			bool UpdateCogOnInitialize = true,
-			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 4294967293,
-			CogPathPreference PathPreference0 = CogRelative,
-			CogPathPreference PathPreference1 = SpaceRelative,
-			CogPathPreference PathPreference2 = Absolute,
-		},
-		float ChaseSpeed = 6,
+		string MeshName = "562d9ed22d7a8bd1:HitZone",
 	},
 },

@@ -201,6 +201,9 @@ Level =
 		HealthHurt = 
 		{
 		},
+		SwordSwipe = 
+		{
+		},
 		Hierarchy = 
 		{
 			Cog = 

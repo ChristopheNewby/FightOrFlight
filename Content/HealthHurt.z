@@ -37,15 +37,5 @@ class HealthHurt : ZilchComponent
         {
             this.Owner.Destroy();
         }
-        if (this.Space.FindObjectByName("Health").HealthCounter.Health < 5)
-        {
-            this.Timer2 += 1;
-            var temp = this.Space.FindObjectByName("Health").HealthCounter.Health;
-            temp +=1;
-            this.Space.FindObjectByName("Health").HealthCounter.Health = temp;
-        }
-        else if (this.Space.FindObjectByName("Health").HealthCounter.Health == 5)
-        {
-        }
     }
 }

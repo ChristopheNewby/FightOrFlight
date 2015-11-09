@@ -11,8 +11,8 @@ class SwordSwipe : ZilchComponent
         {
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("HitZoneA");
-            spawnPosition.Y += 0.7;
-            this.Owner.Transform.Translation = spawnPosition;
+            var temp = this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+            temp.Transform.Translation.Y += 0.7;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
             
         }
@@ -31,7 +31,7 @@ class SwordSwipe : ZilchComponent
     {
         if (event.Key == Keys.W)
         {
-            
+            this.Space.FindObjectByName("HitZoneA").HitzoneDestr.True = true;
         }
     }
 }
