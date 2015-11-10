@@ -1,7 +1,6 @@
 class HitzoneDestr : ZilchComponent
 {
-    [Property]
-    var True : Boolean = false;
+    var Time : Real = 0.0;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -9,6 +8,10 @@ class HitzoneDestr : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Destroy();
+        this.Time += event.Dt;
+        if (this.Time >=0.02)
+        {
+            this.Owner.Destroy();
+        }
     }
 }

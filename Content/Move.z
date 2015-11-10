@@ -3,6 +3,14 @@ class Move : ZilchComponent
 {
     [Property]
     var Speed : Real = 0.25;
+    [Property]
+    var Up : Boolean = false;
+    [Property]
+    var Left : Boolean = false;
+    [Property]
+    var Down : Boolean = false;
+    [Property]
+    var Right : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -13,6 +21,10 @@ class Move : ZilchComponent
         //When W is pressed the player moves up!
         if (Zero.Keyboard.KeyIsDown(Keys.W))
         {
+            this.Up = true;
+            this.Left = false;
+            this.Down = false;
+            this.Right = false;
             var temp = this.Owner.Transform.Translation;
             temp.Y +=this.Speed;
             this.Owner.Transform.Translation = temp;
@@ -20,6 +32,10 @@ class Move : ZilchComponent
         //When S is pressed the player moves down!
         if (Zero.Keyboard.KeyIsDown(Keys.S))
         {
+            this.Up = false;
+            this.Left = false;
+            this.Down = true;
+            this.Right = false;
             var temp = this.Owner.Transform.Translation;
             temp.Y -=this.Speed;
             this.Owner.Transform.Translation = temp;
@@ -27,6 +43,10 @@ class Move : ZilchComponent
         //When A is pressed the player moves to the left!
         if (Zero.Keyboard.KeyIsDown(Keys.A))
         {
+            this.Up = false;
+            this.Left = true;
+            this.Down = false;
+            this.Right = false;
             var temp = this.Owner.Transform.Translation;
             temp.X -=this.Speed;
             this.Owner.Transform.Translation = temp;
@@ -34,6 +54,10 @@ class Move : ZilchComponent
         //When D is pressed the player moves to the right!
         if (Zero.Keyboard.KeyIsDown(Keys.D))
         {
+            this.Up = false;
+            this.Left = false;
+            this.Down = false;
+            this.Right = true;
             var temp = this.Owner.Transform.Translation;
             temp.X +=this.Speed;
             this.Owner.Transform.Translation = temp;
