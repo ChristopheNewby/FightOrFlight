@@ -7,19 +7,19 @@ class MonsterDie : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        if (event.OtherObject.ArchetypeName == "HitZoneA" && Zero.Keyboard.KeyIsDown(Keys.O))
+        if (event.OtherObject.ArchetypeName == "HitZoneA")
         {
             this.Owner.Destroy();
         }
-        if (event.OtherObject.ArchetypeName == "HitZoneB" && Zero.Keyboard.KeyIsDown(Keys.O))
+        if (event.OtherObject.ArchetypeName == "HitZoneB")
         {
             this.Owner.Destroy();
         }
-        if (event.OtherObject.ArchetypeName == "HitZoneC" && Zero.Keyboard.KeyIsDown(Keys.O))
+        if (event.OtherObject.ArchetypeName == "HitZoneC")
         {
             this.Owner.Destroy();
         }
-        if (event.OtherObject.ArchetypeName == "HitZoneD" && Zero.Keyboard.KeyIsDown(Keys.O))
+        if (event.OtherObject.ArchetypeName == "HitZoneD")
         {
             this.Owner.Destroy();
         }
