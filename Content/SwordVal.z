@@ -1,0 +1,46 @@
+class SwordVal : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Up == true)
+        {
+            this.Space.FindObjectByName("SwordA").Sprite.Visible = true;
+        }
+        if (Zero.Keyboard.KeyIsReleased(Keys.O))
+        {
+            this.Space.FindObjectByName("SwordA").Sprite.Visible = false;
+        }
+        
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Left == true)
+        {
+            this.Space.FindObjectByName("SwordB").Sprite.Visible = true;
+        }
+        if (Zero.Keyboard.KeyIsReleased(Keys.O))
+        {
+            this.Space.FindObjectByName("SwordB").Sprite.Visible = false;
+        }
+        
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Down == true)
+        {
+            this.Space.FindObjectByName("SwordC").Sprite.Visible = true;
+        }
+        if (Zero.Keyboard.KeyIsReleased(Keys.O))
+        {
+            this.Space.FindObjectByName("SwordC").Sprite.Visible = false;
+        }
+        
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Right == true)
+        {
+            this.Space.FindObjectByName("SwordD").Sprite.Visible = true;
+        }
+        if (Zero.Keyboard.KeyIsReleased(Keys.O))
+        {
+            this.Space.FindObjectByName("SwordD").Sprite.Visible = false;
+        }
+    }
+}
