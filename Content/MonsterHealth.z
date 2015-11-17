@@ -1,0 +1,18 @@
+class MonsterHealth : ZilchComponent
+{
+    [Property]
+    var Health : Integer = 3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Health < 0)
+        {
+            this.Health = 0;
+        }
+    }
+}

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.62087262, 8.97238064, 0],
+		Vec3 Translation = [-5.73242044, 13.7116413, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.258230001, 0.49000001, 0.220499992, 1],
+		Vec4 Color = [0.432042509, 0.639999986, 0.0672000051, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -58,9 +58,6 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	MonsterDie = 
-	{
-	},
 	EnemyController = 
 	{
 		float PaceSpeed = 1,
@@ -81,5 +78,15 @@ Cog =
 			CogPathPreference PathPreference2 = Absolute,
 		},
 		float ChaseSpeed = 3,
+	},
+	MonsterHealth = 
+	{
+		int Health = 3,
+	},
+	MonsterHurt = 
+	{
+	},
+	MonsterColor = 
+	{
 	},
 },

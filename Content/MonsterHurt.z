@@ -1,0 +1,27 @@
+class MonsterHurt : ZilchComponent
+{
+    var Timer : Real = 0.0;
+    var Timer2 : Real = 0.0;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if (event.OtherObject.ArchetypeName == "HitZoneA" || event.OtherObject.ArchetypeName == "HitZoneB" || event.OtherObject.ArchetypeName == "HitZoneC" || event.OtherObject.ArchetypeName == "HitZoneD")
+        {
+            var temp = this.Owner.MonsterHealth.Health;
+            temp -=1;
+            this.Owner.MonsterHealth.Health = temp;
+        }
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Owner.MonsterHealth.Health == 0)
+        {
+            this.Owner.Destroy();
+        }
+    }
+}
