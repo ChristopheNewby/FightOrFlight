@@ -1,7 +1,7 @@
 class MonsterHealth : ZilchComponent
 {
     [Property]
-    var Health : Integer = 3;
+    var Health : Integer = 5;
     
     function Initialize(init : CogInitializer)
     {
