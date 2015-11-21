@@ -1,0 +1,40 @@
+class SheildScript : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+    }
+    function OnKeyDown(event : KeyboardEvent)
+    {
+        if (event.Key == Keys.P && this.Owner.Move.Up == true) //For moving Forward pressing W.
+        {
+            var spawnPosition = this.Owner.Transform.Translation;
+            var archetypeToSpawn = Archetype.Find("SheildA");
+            spawnPosition.Y += 0.85;
+            this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+            
+        }
+        if (event.Key == Keys.P && this.Owner.Move.Left == true) //For moving Left pressing A.
+        {
+            var spawnPosition = this.Owner.Transform.Translation;
+            var archetypeToSpawn = Archetype.Find("SheildB");
+            spawnPosition.X -= 0.85;
+            this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+        }
+        if (event.Key == Keys.P && this.Owner.Move.Down == true) //For moving Forward pressing S.
+        {
+            var spawnPosition = this.Owner.Transform.Translation;
+            var archetypeToSpawn = Archetype.Find("SheildC");
+            spawnPosition.Y -= 0.85;
+            this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+            
+        }
+        if (event.Key == Keys.P && this.Owner.Move.Right == true) //For moving Left pressing D.
+        {
+            var spawnPosition = this.Owner.Transform.Translation;
+            var archetypeToSpawn = Archetype.Find("SheildD");
+            spawnPosition.X += 0.85;
+            this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+        }
+    }
+}

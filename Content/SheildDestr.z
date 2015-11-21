@@ -1,0 +1,15 @@
+class SheildDestr : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (Zero.Keyboard.KeyIsReleased(Keys.P) && this.Space.FindObjectByName("Player").Move.Up == true)
+        {
+            this.Owner.Destroy();
+        }
+    }
+}
