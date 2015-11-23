@@ -3,7 +3,7 @@ class HealthCounter : ZilchComponent
     [Property]
     var Health : Integer = 5;
     var Text : String = "Health: 5";
-    //var Timer : Real = 0;
+    var Timer : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -12,11 +12,24 @@ class HealthCounter : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.Timer += event.Dt;
+        
         var temp = "Health: `this.Health`";
         this.Owner.SpriteText.Text = temp;
         if(this.Health < 0)
         {
             this.Health = 0;
+        }
+        
+        //This part counts health Regeneration.
+        if (this.Health <= 5 && this.Timer >= 3)
+        {
+            this.Health += 1;
+            this.Timer = 0;
+        }
+        if (this.Health >= 5)
+        {
+            this.Health = 5;
         }
     }
 }

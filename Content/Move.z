@@ -2,7 +2,7 @@
 class Move : ZilchComponent
 {
     [Property]
-    var Speed : Real = 0.25;
+    var Speed : Real = 0.05;
     [Property]
     var Up : Boolean = false;
     [Property]
@@ -59,16 +59,28 @@ class Move : ZilchComponent
             this.Down = false;
             this.Right = true;
             var temp = this.Owner.Transform.Translation;
-            temp.X +=this.Speed;
+            temp.X += this.Speed;
             this.Owner.Transform.Translation = temp;
         }
+        
+        //This code is for Sprinting with the Space key.
         if (Zero.Keyboard.KeyIsDown(Keys.Space))
         {
-            this.Speed = 0.15;
+            this.Speed = 0.1;
         }
         else if (Zero.Keyboard.KeyIsReleased(Keys.Space))
         {
-            this.Speed = 0.10;
+            this.Speed = 0.05;
+        }
+        
+        //This code stops the player whilst blocking so they dont move.
+        if (Zero.Keyboard.KeyIsDown(Keys.P))
+        {
+            this.Speed = 0.0;
+        }
+        else if (Zero.Keyboard.KeyIsReleased(Keys.P))
+        {
+            this.Speed = 0.05;
         }
     }
 }

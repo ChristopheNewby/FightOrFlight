@@ -7,7 +7,7 @@ class SheildDestr : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if (Zero.Keyboard.KeyIsReleased(Keys.P) && this.Space.FindObjectByName("Player").Move.Up == true)
+        if (Zero.Keyboard.KeyIsReleased(Keys.P))
         {
             this.Owner.Destroy();
         }
