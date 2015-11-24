@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "SheildA",
+		string Name = "Gargoyle",
 	},
 	Archetyped = 
 	{
-		string Name = "56c322d63184c404:SheildA",
+		string Name = "5643396f5030d9e9:Gargoyle",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 0.200000003, 1],
+		Vec3 Translation = [1.28612292, 6.71031857, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.430000007, 0.191822991, 0.0193500221, 1],
+		Vec4 Color = [0.291786969, 0.295000017, 0.286150008, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5274db4c2e7c11f9:Circle",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,11 +38,11 @@ Cog =
 	},
 	RigidBody = 
 	{
-		bool Static = true,
+		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
-		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool RotationLocked = true,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -58,18 +58,35 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	SheildDestr = 
+	EnemyController = 
+	{
+		float PaceSpeed = 0,
+		float MaxMoveDistance = 5,
+		CogPath TargetObject = 
+		{
+			string Path = ":/Player",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 2,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
+		float ChaseSpeed = 3.20000005,
+	},
+	MonsterHealth = 
+	{
+		int Health = 10,
+	},
+	MonsterHurt = 
 	{
 	},
-	WindEffect = 
+	MonsterColor = 
 	{
-		bool Active = true,
-		bool WakeUpOnChange = true,
-		float WindSpeed = 100,
-		Vec3 WindDirection = [0, 5, 0],
-	},
-	Region = 
-	{
-		bool WakeUpOnEffectChange = false,
 	},
 },

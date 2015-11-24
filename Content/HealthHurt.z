@@ -11,7 +11,7 @@ class HealthHurt : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if (event.OtherObject.ArchetypeName == "Zombie")
+        if (event.OtherObject.ArchetypeName == "Zombie" || event.OtherObject.ArchetypeName == "Gargoyle")
         {
             var temp = this.Space.FindObjectByName("Health").HealthCounter.Health;
             temp -=1;
@@ -22,7 +22,7 @@ class HealthHurt : ZilchComponent
     function OnCollisionPersisted(event : CollisionEvent)
     {
         this.Timer += 1;
-        if (event.OtherObject.ArchetypeName == "Zombie" && this.Timer >= 60)
+        if (event.OtherObject.ArchetypeName == "Zombie" && this.Timer >= 60 || event.OtherObject.ArchetypeName == "Gargoyle" && this.Timer >= 60)
         {
             var temp = this.Space.FindObjectByName("Health").HealthCounter.Health;
             temp -=1;

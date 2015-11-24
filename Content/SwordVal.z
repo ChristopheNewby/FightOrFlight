@@ -7,7 +7,9 @@ class SwordVal : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Up == true)
+        var temp = this.Owner.SheildScript;
+        
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Up == true && temp.SheildUp == false)
         {
             this.Space.FindObjectByName("SwordA").Sprite.Visible = true;
         }
@@ -16,7 +18,7 @@ class SwordVal : ZilchComponent
             this.Space.FindObjectByName("SwordA").Sprite.Visible = false;
         }
         
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Left == true)
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Left == true && temp.SheildLeft == false)
         {
             this.Space.FindObjectByName("SwordB").Sprite.Visible = true;
         }
@@ -25,7 +27,7 @@ class SwordVal : ZilchComponent
             this.Space.FindObjectByName("SwordB").Sprite.Visible = false;
         }
         
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Down == true)
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Down == true && temp.SheildDown == false)
         {
             this.Space.FindObjectByName("SwordC").Sprite.Visible = true;
         }
@@ -34,7 +36,7 @@ class SwordVal : ZilchComponent
             this.Space.FindObjectByName("SwordC").Sprite.Visible = false;
         }
         
-        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Right == true)
+        if (Zero.Keyboard.KeyIsPressed(Keys.O) && this.Owner.Move.Right == true && temp.SheildRight == false)
         {
             this.Space.FindObjectByName("SwordD").Sprite.Visible = true;
         }

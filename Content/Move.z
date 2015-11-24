@@ -77,10 +77,15 @@ class Move : ZilchComponent
         if (Zero.Keyboard.KeyIsDown(Keys.P))
         {
             this.Speed = 0.0;
+            this.Up = false;
+            this.Left = false;
+            this.Down = false;
+            this.Right = false;
         }
         else if (Zero.Keyboard.KeyIsReleased(Keys.P))
         {
             this.Speed = 0.05;
         }
+
     }
 }

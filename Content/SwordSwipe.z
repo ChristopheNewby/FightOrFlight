@@ -6,7 +6,7 @@ class SwordSwipe : ZilchComponent
     }
     function OnKeyDown(event : KeyboardEvent)
     {
-        if (event.Key == Keys.O && this.Owner.Move.Up == true) //For moving Forward pressing W.
+        if (event.Key == Keys.O && this.Owner.Move.Up == true && this.Owner.SheildScript.SheildUp == false) //For moving Forward pressing W.
         {
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("HitZoneA");
@@ -14,14 +14,14 @@ class SwordSwipe : ZilchComponent
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
             
         }
-        if (event.Key == Keys.O && this.Owner.Move.Left == true) //For moving Left pressing A.
+        if (event.Key == Keys.O && this.Owner.Move.Left == true && this.Owner.SheildScript.SheildLeft == false) //For moving Left pressing A.
         {
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("HitZoneB");
             spawnPosition.X -= 0.85;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
         }
-        if (event.Key == Keys.O && this.Owner.Move.Down == true) //For moving Forward pressing S.
+        if (event.Key == Keys.O && this.Owner.Move.Down == true && this.Owner.SheildScript.SheildDown == false) //For moving Forward pressing S.
         {
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("HitZoneC");
@@ -29,7 +29,7 @@ class SwordSwipe : ZilchComponent
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
             
         }
-        if (event.Key == Keys.O && this.Owner.Move.Right == true) //For moving Left pressing D.
+        if (event.Key == Keys.O && this.Owner.Move.Right == true && this.Owner.SheildScript.SheildRight == false) //For moving Left pressing D.
         {
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("HitZoneD");

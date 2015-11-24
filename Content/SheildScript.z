@@ -1,21 +1,38 @@
 class SheildScript : ZilchComponent
 {
+    [Property]
+    var SheildUp : Boolean = false;
+    [Property]
+    var SheildLeft : Boolean = false;
+    [Property]
+    var SheildDown : Boolean = false;
+    [Property]
+    var SheildRight : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
     }
     function OnKeyDown(event : KeyboardEvent)
     {
         if (event.Key == Keys.P && this.Owner.Move.Up == true) //For moving Forward pressing W.
         {
+            this.SheildUp = true;
+            this.SheildLeft = false;
+            this.SheildDown = false;
+            this.SheildRight = false;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildA");
             spawnPosition.Y += 0.612698;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
-            
         }
         if (event.Key == Keys.P && this.Owner.Move.Left == true) //For moving Left pressing A.
         {
+            this.SheildUp = false;
+            this.SheildLeft = true;
+            this.SheildDown = false;
+            this.SheildRight = false;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildB");
             spawnPosition.X -= 0.612698;
@@ -23,6 +40,10 @@ class SheildScript : ZilchComponent
         }
         if (event.Key == Keys.P && this.Owner.Move.Down == true) //For moving Forward pressing S.
         {
+            this.SheildUp = false;
+            this.SheildLeft = false;
+            this.SheildDown = true;
+            this.SheildRight = false;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildC");
             spawnPosition.Y -= 0.612698;
@@ -31,10 +52,25 @@ class SheildScript : ZilchComponent
         }
         if (event.Key == Keys.P && this.Owner.Move.Right == true) //For moving Left pressing D.
         {
+            this.SheildUp = false;
+            this.SheildLeft = false;
+            this.SheildDown = false;
+            this.SheildRight = true;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildD");
             spawnPosition.X += 0.612698;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+        }
+    }
+    
+    function OnKeyUp( event : KeyboardEvent)
+    {
+        if (event.Key == Keys.P)
+        {
+            this.SheildUp = false;
+            this.SheildLeft = false;
+            this.SheildDown = false;
+            this.SheildRight = false;
         }
     }
 }
