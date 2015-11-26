@@ -1,0 +1,29 @@
+class KnockBack : ZilchComponent
+{
+    var Time : Real = 0.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Time += event.Dt;
+        
+        if (this.Time >= 2)
+        {
+            this.Owner.WindEffect.Active = false;
+        }
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if (event.OtherObject.ArchetypeName == "Zombie" || event.OtherObject.ArchetypeName == "Gargoyle")
+        {
+            this.Owner.WindEffect.Active = true;
+            this.Time = 0;
+        }
+    }
+}

@@ -63,13 +63,16 @@ Cog =
 	},
 	WindEffect = 
 	{
-		bool Active = true,
+		bool Active = false,
 		bool WakeUpOnChange = true,
-		float WindSpeed = 100,
-		Vec3 WindDirection = [0, 5, 0],
+		float WindSpeed = 150,
+		Vec3 WindDirection = [0, 1, 0],
 	},
 	Region = 
 	{
 		bool WakeUpOnEffectChange = false,
+	},
+	KnockBack = 
+	{
 	},
 },

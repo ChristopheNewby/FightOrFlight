@@ -22,7 +22,7 @@ class HealthCounter : ZilchComponent
         }
         
         //This part counts health Regeneration.
-        if (this.Health <= 5 && this.Timer >= 5)
+        if (this.Health <= 5 && this.Timer >= 7)
         {
             this.Health += 1;
             this.Timer = 0;

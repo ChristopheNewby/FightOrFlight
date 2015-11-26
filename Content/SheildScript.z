@@ -24,7 +24,7 @@ class SheildScript : ZilchComponent
             this.SheildRight = false;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildA");
-            spawnPosition.Y += 0.612698;
+            spawnPosition.Y += 0.625052;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
         }
         if (event.Key == Keys.P && this.Owner.Move.Left == true) //For moving Left pressing A.
@@ -35,7 +35,7 @@ class SheildScript : ZilchComponent
             this.SheildRight = false;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildB");
-            spawnPosition.X -= 0.612698;
+            spawnPosition.X -= 0.625052;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
         }
         if (event.Key == Keys.P && this.Owner.Move.Down == true) //For moving Forward pressing S.
@@ -46,7 +46,7 @@ class SheildScript : ZilchComponent
             this.SheildRight = false;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildC");
-            spawnPosition.Y -= 0.612698;
+            spawnPosition.Y -= 0.625052;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
             
         }
@@ -58,7 +58,7 @@ class SheildScript : ZilchComponent
             this.SheildRight = true;
             var spawnPosition = this.Owner.Transform.Translation;
             var archetypeToSpawn = Archetype.Find("SheildD");
-            spawnPosition.X += 0.612698;
+            spawnPosition.X += 0.625052;
             this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
         }
     }

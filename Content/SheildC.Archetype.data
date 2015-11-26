@@ -61,4 +61,18 @@ Cog =
 	SheildDestr = 
 	{
 	},
+	WindEffect = 
+	{
+		bool Active = false,
+		bool WakeUpOnChange = true,
+		float WindSpeed = 150,
+		Vec3 WindDirection = [1, 0, 0],
+	},
+	Region = 
+	{
+		bool WakeUpOnEffectChange = false,
+	},
+	KnockBack = 
+	{
+	},
 },
