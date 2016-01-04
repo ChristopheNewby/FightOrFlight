@@ -1,0 +1,17 @@
+class LostScript : ZilchComponent
+{
+    var PlayerPosition : Real3 = Real3();
+    function Initialize(init : CogInitializer)
+    {
+        this.PlayerPosition = this.Owner.Transform.Translation;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (Zero.Keyboard.KeyIsPressed(Keys.R))
+        {
+            this.Owner.Transform.Translation = this.PlayerPosition;
+        }
+    }
+}
